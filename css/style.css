@@ -152,27 +152,36 @@ nav a.active {
 
 .connect-section h2 {
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* sebelumnya 3rem, sekarang lebih dekat */
     font-weight: 700;
 }
 
 .connect-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3.5rem; /* sedikit lebih rapat dari sebelumnya */
     max-width: 1000px;
+}
+
+/* ---------- LEFT SIDE (Socials) ---------- */
+.social-title {
+    font-size: 1rem;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 1rem; /* sebelumnya terlalu kecil/berdekatan */
 }
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem; /* sedikit lebih rapat */
+    margin-top: 0.5rem; /* memberi jarak dari "Find Me On" */
     align-items: center;
     flex-wrap: wrap;
 }
 
 .social-links a {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +191,7 @@ nav a.active {
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .social-links a:hover {
@@ -192,23 +201,25 @@ nav a.active {
     transform: translateY(-3px);
 }
 
+/* ---------- RIGHT SIDE (Contact Info) ---------- */
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 .contact-info h3 {
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem; /* sebelumnya 1.5rem — terlalu jauh */
     color: #888;
     letter-spacing: 1px;
 }
 
 .contact-info p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #d1d1d1;
+    margin-top: 0.3rem; /* memberi sedikit “napas” */
 }
+
 
 /* ============================================
    EASTER EGG - BIBLE VERSE
