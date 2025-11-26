@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joceline - Designer & UX/UI Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Landing Page Specific Styles */
+        .hero {
+            margin-top: 120px;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .hero-content h1 span {
+            font-weight: 400;
+            color: #888;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iphone-frame {
+            width: 280px;
+            height: 580px;
+            background: #000;
+            border: 8px solid #222;
+            border-radius: 45px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .iphone-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 25px;
+            background: #000;
+            border-radius: 0 0 25px 25px;
+            z-index: 10;
+        }
+
+        .iphone-content {
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            padding: 30px 12px 12px;
+            overflow: hidden;
+            font-size: 11px;
+            color: #333;
+        }
+
+        .description {
+            padding: 6rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .description h2 {
+            font-size: 2.5rem;
+            line-height: 1.3;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .description h2 .highlight {
+            background: linear-gradient(180deg, #00d4ff 0%, #0099ff 40%, rgba(10, 10, 10, 0.6) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-section {
+            padding: 6rem 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .project-content h3 {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .project-content h2 {
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .btn-see-more {
+            margin-top: 2rem;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.8rem 2rem;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-see-more:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        .project-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                margin-top: 80px;
+                padding: 2rem;
+                min-height: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .description {
+                padding: 3rem 2rem;
+            }
+
+            .description h2 {
+                font-size: 1.8rem;
+            }
+
+            .project-section {
+                grid-template-columns: 1fr;
+                padding: 3rem 2rem;
+            }
+
+            .iphone-frame {
+                width: 220px;
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Joceline</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1><span>Hello, I'm a</span><br>Designer</h1>
+            
+            <div class="bio-box">
+                <p>I am currently a second-year university student studying in Binus University, double majoring in information systems and business. Other skills that are not relevant to my major are photography and graphic design. I started them since I was in middle school and continued on until now. Right now, I am focusing on my exploration, on areas like UI/UX Design, and Data Science that are relevant to my studies.</p>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='works.html'">Seek my works</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="iphone-frame">
+                <div class="iphone-content">
+                    <div style="font-size: 10px; margin-bottom: 8px; color: #999;">9:41</div>
+                    <div style="background: rgba(0, 153, 255, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 12px;">
+                        <div style="color: #0099ff; font-weight: 600; margin-bottom: 4px;">Hyaluronic Acid</div>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span style="background: #0099ff; color: white; padding: 3px 8px; border-radius: 4px; font-size: 9px;">anti-aging</span>
+                            <span style="background: #0099ff; color: white; padding: 3px 8px; border-radius: 4px; font-size: 9px;">moisturing</span>
+                        </div>
+                    </div>
+                    <div style="color: #666; font-size: 10px; line-height: 1.4;">
+                        <p style="margin-bottom: 8px;"><strong>Best pertanyaan</strong></p>
+                        <p style="margin-bottom: 8px;">Perlayasan</p>
+                        <p style="margin-bottom: 8px;">Apa yang dilakukan desain ini?</p>
+                        <p style="color: #999; font-size: 9px;">Referensi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="description">
+        <h2>I solve problems by observing patterns, creating strategies, and validating ideas. With a human-centred approach, I focus on clarity, efficiency, and results, always mindful that inspiration and creativity are <span class="highlight">never mine alone.</span></h2>
+    </section>
+
+    <!-- Project Section -->
+    <section class="project-section">
+        <div class="project-content">
+            <h3>Coska, Cosmetics and Medicine Alternative Product Finder App</h3>
+            <h2>Improving media coverage and enhancing scientific research for local cosmetics and medicine-based products in Indonesia</h2>
+            <button class="btn-see-more" onclick="window.location.href='works.html'">See More...</button>
+        </div>
+        <div class="project-image">
+            <div style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 20px;">
+                [Project Image Placeholder]
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section" id="contact">
+        <h2>Let's Connect!</h2>
+        <div class="connect-content">
+            <div>
+                <h3>Find me on</h3>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>joceline.chen@binus.ac.id</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Easter Egg - Bible Verse -->
+    <button class="easter-egg" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

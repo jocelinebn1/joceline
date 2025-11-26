@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joceline - My Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Works Page Specific Styles */
+        .works-container {
+            margin-top: 120px;
+            padding: 4rem;
+        }
+
+        .works-header {
+            margin-bottom: 4rem;
+        }
+
+        .works-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .category-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .category-card p {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .languages-section {
+            margin-top: 6rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            line-height: 1.2;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .language-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .language-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .language-card p {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .projects-link {
+            color: #0099ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .projects-link:hover {
+            color: #00d4ff;
+        }
+
+        @media (max-width: 768px) {
+            .works-container {
+                margin-top: 80px;
+                padding: 2rem;
+            }
+
+            .works-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .languages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .connect-section {
+                margin: 0 -2rem -4rem -2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Joceline</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html" class="active">Works</a></li>
+            <li><a href="fun.html">Fun</a></li>
+            <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="works-container">
+        <!-- Header -->
+        <div class="works-header">
+            <h1>My works</h1>
+        </div>
+
+        <!-- Category Grid -->
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>UI/UX Design</h3>
+                <p>I enjoy designing multiple projects even if its not an assignment! I take pleasure in figuring out ways so that people can navigate better through my design journey.</p>
+                <button class="seek-btn">Seek my works</button>
+            </div>
+
+            <div class="category-card">
+                <h3>Software<br>Development</h3>
+                <p>Visualizing and eventually putting my idea into reality will always be my favorite line of work.</p>
+                <button class="seek-btn">Seek my works</button>
+            </div>
+
+            <div class="category-card">
+                <h3>Data Science</h3>
+                <p>I enjoy designing multiple projects even if its not an assignment! I take pleasure in figuring out ways so that people can navigate better through my design journey.</p>
+                <button class="seek-btn">Seek my works</button>
+            </div>
+
+            <div class="category-card">
+                <h3>Graphic Design</h3>
+                <p>Visualizing and eventually putting my idea into reality will always be my favorite line of work.</p>
+                <a href="assets/pdf/portfolio.pdf" download class="seek-btn">Download Portfolio</a>
+            </div>
+
+            <div class="category-card">
+                <h3>Photography</h3>
+                <p>I enjoy designing multiple projects even if its not an assignment! I take pleasure in figuring out ways so that people can navigate better through my design journey.</p>
+                <a href="assets/pdf/portfolio.pdf" download class="seek-btn">Download Portfolio</a>
+            </div>
+
+            <div class="category-card">
+                <h3>Mandarin</h3>
+                <p>I enjoy designing multiple projects even if its not an assignment! I take pleasure in figuring out ways so that people can navigate better through my design journey.</p>
+                <button class="seek-btn">Seek my works</button>
+            </div>
+        </div>
+
+        <!-- Programming Languages Section -->
+        <div class="languages-section">
+            <h2 class="section-title">Programming Languages</h2>
+
+            <div class="languages-grid">
+                <div class="language-card">
+                    <h4>Python</h4>
+                    <p>I mainly use python to do quick and fast projects to get out of my head like when I wanted to make a small game idea. I also use python to make analysis from data.</p>
+                    <a href="#" class="projects-link">Projects I did with Python ></a>
+                </div>
+
+                <div class="language-card">
+                    <h4>SQL</h4>
+                    <p>I mainly use python to do quick and fast projects to get out of my head like when I wanted to make a small game idea. I also use python to make analysis from data.</p>
+                    <a href="#" class="projects-link">Projects I did with SQL ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect Section -->
+    <section class="connect-section" id="contact">
+        <h2>Let's Connect!</h2>
+        <div class="connect-content">
+            <div>
+                <h3>Find me on</h3>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>joceline.chen@binus.ac.id</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Easter Egg - Bible Verse -->
+    <button class="easter-egg" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

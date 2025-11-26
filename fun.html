@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joceline - Fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Fun Page Specific Styles */
+        .fun-container {
+            margin-top: 120px;
+            padding: 4rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .fun-header {
+            margin-bottom: 4rem;
+        }
+
+        .fun-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .fun-items-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .fun-item-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fun-item-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .fun-item-card.expanded {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .fun-item-content {
+            flex: 1;
+        }
+
+        .fun-item-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #d1d1d1;
+            margin-bottom: 2rem;
+            font-family: 'Noto Sans CJK SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            text-align: left;
+        }
+
+        .fun-item-meaning {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            text-align: left;
+        }
+
+        .fun-item-meaning.visible {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .meaning-title {
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .check-meaning-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0099ff 0%, #0073cc 100%);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+            font-family: 'Inter', sans-serif;
+            margin: 1rem auto 0;
+        }
+
+        .check-meaning-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+        }
+
+        .check-meaning-btn.expanded {
+            background: linear-gradient(135deg, #0073cc 0%, #0099ff 100%);
+        }
+
+        @media (max-width: 768px) {
+            .fun-container {
+                margin-top: 80px;
+                padding: 2rem;
+            }
+
+            .fun-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .fun-items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-section {
+                margin: 0 -2rem -4rem -2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Joceline</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="fun.html" class="active">Fun</a></li>
+            <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="fun-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            Joceline > Fun > 我对你而言就像风
+        </div>
+
+        <!-- Header -->
+        <div class="fun-header">
+            <h1>我对你而言就像风</h1>
+        </div>
+
+        <!-- Fun Items Grid -->
+        <div class="fun-items-grid">
+            <!-- Left Card - Poem -->
+            <div class="fun-item-card" id="item1">
+                <div class="fun-item-content">
+                    <p>昨天我遇见了你,我不喜欢昨天。
+因为我知道,总有一天你会离开我。
+我对你而言京就像风。
+
+我不能拥有你,你也不能拥有我。
+你会尝试接触我,但你找不到我。
+我会在这里照顾你。</p>
+                </div>
+            </div>
+
+            <!-- Right Card - Meaning -->
+            <div class="fun-item-card" id="item2">
+                <div class="fun-item-content">
+                    <button class="check-meaning-btn" onclick="toggleMeaning(this)">Check Meaning</button>
+                    
+                    <div class="fun-item-meaning" id="meaning2">
+                        <div class="meaning-title">Meaning</div>
+                        <p>The poem talks about someone who is not that close anymore to their friend.</p>
+                        <p>As the wind, <strong>we can feel them but we can't see them, we can't contain them, and we can't call them to come. But still, the wind gives us a breeze in life.</strong></p>
+                        <p>Similar to what this person is doing to their friend. Even with distance created inside their friendship, their care can still be felt, feeling like a breeze in such a suffocating life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect Section -->
+    <section class="connect-section" id="contact">
+        <h2>Let's Connect!</h2>
+        <div class="connect-content">
+            <div>
+                <h3>Find me on</h3>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>joceline.chen@binus.ac.id</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Easter Egg - Bible Verse -->
+    <button class="easter-egg" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleMeaning(button) {
+            const meaningDiv = button.parentElement.nextElementSibling;
+            meaningDiv.classList.toggle('visible');
+            button.classList.toggle('expanded');
+            
+            // Change button text
+            if (meaningDiv.classList.contains('visible')) {
+                button.textContent = 'Hide Meaning';
+            } else {
+                button.textContent = 'Check Meaning';
+            }
+        }
+    </script>
+</body>
+</html>

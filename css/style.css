@@ -1,0 +1,328 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom-color: #ffffff;
+}
+
+nav a.active {
+    border-bottom-color: #ffffff;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0099ff 0%, #0073cc 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #0a0a0a;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.seek-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0099ff 0%, #0073cc 100%);
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+.seek-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
+/* ============================================
+   GLASSMORPHISM EFFECT
+   ============================================ */
+
+.bio-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #d1d1d1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   CONNECT SECTION
+   ============================================ */
+
+.connect-section {
+    padding: 6rem 4rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connect-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.connect-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
+    background: rgba(0, 153, 255, 0.2);
+    border-color: #0099ff;
+    color: #0099ff;
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+/* ============================================
+   EASTER EGG - BIBLE VERSE
+   ============================================ */
+
+.easter-egg {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0099ff 0%, #0073cc 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    z-index: 999;
+    border: none;
+}
+
+.easter-egg:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.5);
+}
+
+.bible-verse-card {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 300px;
+    pointer-events: auto;
+    animation: slideUp 0.4s ease;
+    z-index: 999;
+    box-shadow: 0 8px 32px rgba(0, 153, 255, 0.1);
+}
+
+.bible-verse-card h3 {
+    color: #0099ff;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.bible-verse-card p {
+    color: #d1d1d1;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.verse-reference {
+    color: #888;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+.close-verse {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.close-verse:hover {
+    color: #0099ff;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 1.5rem 2rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .connect-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
