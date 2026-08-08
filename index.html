@@ -3,335 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joceline Chen - Designer & Developer</title>
+    <title>Joceline Christabelle Chen — Portfolio</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Personal portfolio of Joceline Christabelle Chen. Student double-majoring in Information Systems and Business, specializing in software development, machine learning, and creative design.">
+    <!-- Google Fonts & Icon Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Landing Page Specific Styles */
-        .hero {
-            margin-top: 80px;
-            padding: 6rem 4rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            min-height: 90vh;
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            letter-spacing: -1px;
-            color: #1d1d1f;
-        }
-
-        .hero-content h1 span {
-            font-weight: 300;
-            color: #6e6e73;
-        }
-
-        .animated-text {
-            display: inline-block;
-            background: linear-gradient(90deg, 
-                #FF6B35 0%, 
-                #F7931E 16.67%, 
-                #FDC830 33.33%, 
-                #4CAF50 50%, 
-                #2196F3 66.67%, 
-                #9C27B0 83.33%, 
-                #E91E63 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 100%;
-            animation: rainbowShift 3s ease-in-out infinite;
-            font-weight: 600;
-        }
-
-        @keyframes rainbowShift {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .iphone-frame {
-            width: 280px;
-            height: 580px;
-            background: #1d1d1f;
-            border: 6px solid #1d1d1f;
-            border-radius: 45px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .iphone-frame::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 25px;
-            background: #1d1d1f;
-            border-radius: 0 0 25px 25px;
-            z-index: 10;
-        }
-
-        .iphone-content {
-            width: 100%;
-            height: 100%;
-            background: #f5f5f7;
-            padding: 30px 12px 12px;
-            overflow: hidden;
-            font-size: 11px;
-            color: #1d1d1f;
-        }
-
-        .description {
-            padding: 6rem 4rem;
-            max-width: 980px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .description h2 {
-            font-size: 2.5rem;
-            line-height: 1.3;
-            margin-bottom: 3rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            color: #1d1d1f;
-        }
-
-        .description h2 .highlight {
-            color: #0071e3;
-        }
-
-        .project-section {
-            padding: 6rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            background: #f5f5f7;
-        }
-
-        .project-content h3 {
-            font-size: 0.75rem;
-            color: #6e6e73;
-            margin-bottom: 1rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .project-content h2 {
-            font-size: 2rem;
-            line-height: 1.2;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            color: #1d1d1f;
-        }
-
-        .btn-see-more {
-            margin-top: 2rem;
-            background: transparent;
-            border: 1px solid #0071e3;
-            padding: 0.625rem 1.25rem;
-            color: #0071e3;
-            border-radius: 980px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.875rem;
-        }
-
-        .btn-see-more:hover {
-            background: #0071e3;
-            color: white;
-        }
-
-        .project-image {
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                margin-top: 60px;
-                padding: 3rem 2rem 2rem;
-                min-height: auto;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .description {
-                padding: 3rem 2rem;
-            }
-
-            .description h2 {
-                font-size: 1.75rem;
-            }
-
-            .project-section {
-                grid-template-columns: 1fr;
-                padding: 3rem 2rem;
-            }
-
-            .iphone-frame {
-                width: 220px;
-                height: 450px;
-            }
-        }
-    </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav>
-        <div class="logo">Joceline</div>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="works.html">Works</a></li>
-            <li><a href="fun.html">Fun</a></li>
-            <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+        <a href="index.html" class="logo" id="nav-logo">Joceline Chen<span>.</span></a>
+        <ul id="nav-links">
+            <li><a href="index.html" class="active" id="link-home">Home</a></li>
+            <li><a href="works.html" id="link-works">Works</a></li>
+            <li><a href="fun.html" id="link-fun">Fun</a></li>
+            <li><a href="#contact" id="link-contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1><span>Hello, I'm a</span><br><span class="animated-text" id="changingText">Learner</span></h1>
-            
-            <div class="bio-box">
-                <p>I am currently a second-year university student studying in Binus University, double majoring in information systems and business. Other skills that are not relevant to my major are photography and graphic design. I started them since I was in middle school and continued on until now. Right now, I am focusing on my exploration, on areas like UI/UX Design, and Data Science that are relevant to my studies.</p>
-            </div>
-
-            <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="window.location.href='works.html'">Seek my works</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <div class="iphone-frame">
-                <div class="iphone-content">
-                    <div style="font-size: 10px; margin-bottom: 8px; color: #6e6e73;">9:41</div>
-                    <div style="background: rgba(0, 113, 227, 0.1); padding: 8px; border-radius: 12px; margin-bottom: 12px;">
-                        <div style="color: #0071e3; font-weight: 600; margin-bottom: 4px;">Hyaluronic Acid</div>
-                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                            <span style="background: #0071e3; color: white; padding: 3px 8px; border-radius: 12px; font-size: 9px;">anti-aging</span>
-                            <span style="background: #0071e3; color: white; padding: 3px 8px; border-radius: 12px; font-size: 9px;">moisturing</span>
-                        </div>
+    <main class="container">
+        <section class="hero-wrapper" id="home">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Joceline</span></h1>
+                    <p class="subtitle">A third-year student blending technology, business, and creative design.</p>
+                    
+                    <div class="bio-card">
+                        <p>I am currently studying at Binus University, double majoring in Information Systems and Business. Since middle school, I have developed secondary skills in photography and graphic design that allow me to bring a creative eye to technological challenges.</p>
+                        <p>Right now, I am focusing my exploration on software development and machine learning, applying my major fields of study to build smart, efficient, and user-centric solutions.</p>
                     </div>
-                    <div style="color: #1d1d1f; font-size: 10px; line-height: 1.4;">
-                        <p style="margin-bottom: 8px;"><strong>Best pertanyaan</strong></p>
-                        <p style="margin-bottom: 8px;">Perlayasan</p>
-                        <p style="margin-bottom: 8px;">Apa yang dilakukan desain ini?</p>
-                        <p style="color: #6e6e73; font-size: 9px;">Referensi</p>
+
+                    <div class="cta-group">
+                        <a href="works.html" class="btn btn-primary" id="btn-see-works">Seek my works</a>
+                        <a href="#contact" class="btn btn-secondary" id="btn-get-contact">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/capy.jpg" alt="Capy - Mascot" id="hero-illustration">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Description Section -->
-    <section class="description">
-        <h2>I solve problems by observing patterns, creating strategies, and validating ideas. With a human-centred approach, I focus on clarity, efficiency, and results, always mindful that inspiration and creativity are <span class="highlight">never mine alone.</span></h2>
-    </section>
-
-    <!-- Project Section -->
-    <section class="project-section">
-        <div class="project-content">
-            <h3>Coska - Product Finder App</h3>
-            <h2>Improving media coverage and enhancing scientific research for local cosmetics and medicine-based products in Indonesia</h2>
-            <button class="btn-see-more" onclick="window.location.href='works.html'">Learn More</button>
-        </div>
-        <div class="project-image">
-            <div style="background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%); width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; color: #6e6e73; border-radius: 18px;">
-                [Project Image]
-            </div>
+    <!-- Intro Strap Quote Section -->
+    <section class="intro-strap">
+        <div class="container">
+            <h2>I solve problems by observing patterns, creating strategies, and validating ideas. With a human-centred approach, I focus on clarity, efficiency, and results, always mindful that inspiration and creativity are <span class="accent-word">never mine alone.</span></h2>
         </div>
     </section>
 
     <!-- Connect Section -->
     <section class="connect-section" id="contact">
-        <h2>Let's Connect!</h2>
-        <div class="connect-content">
-            <div>
-                <h3>Find me on</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/joceline-chen-577066222/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/jocelinechristabelle/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@jocelinechen6804" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.kaggle.com/jocelinechn1" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
-                    <a href="https://github.com/jocelinebn1" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-
+        <div class="container">
+            <div class="connect-grid">
+                <div class="connect-left">
+                    <h2>Let's Connect!</h2>
+                    <p>I am always open to discussing new projects, creative ideas, or opportunities in business, software engineering, and data science.</p>
+                    
+                    <div class="contact-info-block">
+                        <h3>Find me on</h3>
+                        <div class="social-links" id="social-links-list">
+                            <a href="https://www.linkedin.com/in/joceline-chen-577066222/" title="LinkedIn" target="_blank" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/jocelinechristabelle/" title="Instagram" target="_blank" id="social-instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@jocelinechen6804" title="YouTube" target="_blank" id="social-youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.kaggle.com/jocelinechn1" title="Kaggle" target="_blank" id="social-kaggle"><i class="fab fa-kaggle"></i></a>
+                            <a href="https://github.com/jocelinebn1" title="GitHub" target="_blank" id="social-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-info">
-                <h3>Contact Info</h3>
-                <p>joceline.chen@binus.ac.id</p>
+
+                <div class="connect-right">
+                    <div class="contact-info-block">
+                        <h3>Email Me</h3>
+                        <a href="mailto:joceline.chen@binus.ac.id" id="contact-email">joceline.chen@binus.ac.id</a>
+                    </div>
+                    <div class="contact-info-block">
+                        <h3>Location</h3>
+                        <p id="contact-location">Bandung, Indonesia</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Easter Egg - Bible Verse -->
-    <button class="easter-egg" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
+    <!-- Easter Egg - Bible Verse Button -->
+    <button class="easter-egg" id="easter-egg-trigger" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
 
     <script src="js/script.js"></script>
-    <script>
-        // Changing text animation
-        const texts = ['Learner', 'Designer', 'Developer', 'Creator', 'Thinker'];
-        let currentIndex = 0;
-        const changingText = document.getElementById('changingText');
-
-        function changeText() {
-            changingText.style.opacity = '0';
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % texts.length;
-                changingText.textContent = texts[currentIndex];
-                changingText.style.opacity = '1';
-            }, 300);
-        }
-
-        changingText.style.transition = 'opacity 0.3s ease-in-out';
-        setInterval(changeText, 2000);
-    </script>
 </body>
 </html>

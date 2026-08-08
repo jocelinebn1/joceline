@@ -3,204 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joceline - Fun</title>
+    <title>Creative Space — Joceline Christabelle Chen</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="A space for creative expressions and poetry by Joceline Christabelle Chen. Featuring the poem 'I am to you like the wind'.">
+    <!-- Google Fonts & Icon Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Fun Page Specific Styles */
-        .fun-container {
-            margin-top: 80px;
-            padding: 6rem 4rem 4rem;
-        }
-
-        .fun-header {
-            margin-bottom: 4rem;
-        }
-
-        .fun-header h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-            color: #1d1d1f;
-        }
-
-        .fun-items-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 6rem;
-        }
-
-        .fun-item-card {
-            background: #f5f5f7;
-            border: 0.5px solid rgba(0, 0, 0, 0.04);
-            border-radius: 18px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .fun-item-card:hover {
-            background: #ffffff;
-            border-color: rgba(0, 0, 0, 0.08);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .fun-item-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-            color: #1d1d1f;
-        }
-
-        .fun-item-content p {
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            color: #1d1d1f;
-            margin-bottom: 1.5rem;
-            font-family: 'Noto Sans CJK SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            text-align: left;
-        }
-
-        .fun-item-meaning {
-            font-size: 0.875rem;
-            line-height: 1.6;
-            color: #6e6e73;
-            margin-top: 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
-            opacity: 0;
-            text-align: left;
-        }
-
-        .fun-item-meaning.visible {
-            max-height: 500px;
-            opacity: 1;
-        }
-
-        .meaning-title {
-            font-size: 0.75rem;
-            color: #6e6e73;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .check-meaning-btn {
-            display: inline-block;
-            background: #0071e3;
-            color: white;
-            padding: 0.625rem 1.25rem;
-            border-radius: 980px;
-            border: none;
-            cursor: pointer;
-            font-weight: 400;
-            font-size: 0.875rem;
-            transition: all 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-        }
-
-        .check-meaning-btn:hover {
-            background: #0077ed;
-        }
-
-        @media (max-width: 768px) {
-            .fun-container {
-                margin-top: 60px;
-                padding: 3rem 2rem 2rem;
-            }
-
-            .fun-header h1 {
-                font-size: 2.5rem;
-            }
-
-            .fun-items-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav>
-        <div class="logo">Joceline</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="works.html">Works</a></li>
-            <li><a href="fun.html" class="active">Fun</a></li>
-            <li><a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a></li>
+        <a href="index.html" class="logo" id="nav-logo">Joceline Chen<span>.</span></a>
+        <ul id="nav-links">
+            <li><a href="index.html" id="link-home">Home</a></li>
+            <li><a href="works.html" id="link-works">Works</a></li>
+            <li><a href="fun.html" class="active" id="link-fun">Fun</a></li>
+            <li><a href="#contact" id="link-contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <div class="fun-container">
+    <main class="container fun-container">
         <!-- Header -->
         <div class="fun-header">
-            <h1>Fun Projects</h1>
+            <h1>Creative Space</h1>
+            <p>Reflections, poetry, and creative endeavors outside of my technical coursework.</p>
         </div>
 
-        <!-- Fun Items Grid -->
-        <div class="fun-items-grid">
-            <!-- Poem 1 -->
-            <div class="fun-item-card">
-                <h3>我对你而言就像风</h3>
-                <div class="fun-item-content">
-                    <p>昨天我遇见了你,我不喜欢昨天。
-因为我知道,总有一天你会离开我。
-我对你而言就像风。
+        <!-- Poem Wrapper -->
+        <div class="poem-wrapper" id="poem-box">
+            <div class="poem-card">
+                <h2 id="poem-title">我对你而言就像风</h2>
+                <div class="poem-content" id="poem-chinese-content">
+                    昨天我遇见了你，我不喜欢昨天。
+                    因为我知道，总有一天你会离开我。
+                    我对你而言就像风。
 
-我不能拥有你,你也不能拥有我。
-你会尝试接触我,但你找不到我。
-我会在这里照顾你。</p>
-                    <button class="check-meaning-btn" onclick="toggleMeaning(this)">Check Meaning</button>
-                    <div class="fun-item-meaning">
-                        <div class="meaning-title">Meaning</div>
-                        <p>The poem talks about someone who is not that close anymore to their friend. As the wind, we can feel them but we can't see them, we can't contain them, and we can't call them to come. But still, the wind gives us a breeze in life. Similar to what this person is doing to their friend. Even with distance created inside their friendship, their care can still be felt, feeling like a breeze in such a suffocating life.</p>
+                    我不能拥有你，你也不能拥有我。
+                    你会尝试接触我，但你找不到我。
+                    我会在这里照顾你。
+                </div>
+
+                <!-- Interactive Accordion for Translation & Meaning -->
+                <div class="accordion-container">
+                    <button class="accordion-trigger" id="btn-toggle-translation" onclick="toggleTranslation(this)">
+                        <span>Read Translation & Meaning</span> <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="accordion-content" id="translation-details">
+                        <div class="translation-title">English Translation</div>
+                        <p class="english-text" id="poem-english-content">
+                            Yesterday I met you, I don't like yesterday.
+                            Because I know, one day you will leave me.
+                            I am to you like the wind.
+
+                            I cannot have you, and you cannot have me.
+                            You will try to reach me, but you cannot find me.
+                            I will be here looking after you.
+                        </p>
+                        
+                        <div class="translation-title">Meaning</div>
+                        <p class="meaning-text" id="poem-meaning-content">
+                            This poem reflects on a shifting friendship and emotional distance. Like the wind, one person's care and presence remain a constant, subtle breeze in their friend's life—felt and appreciated but holding no containment, demands, or close proximity. It is a gentle reminder that care can transcend distance and change.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+    </main>
 
     <!-- Connect Section -->
     <section class="connect-section" id="contact">
-        <h2>Let's Connect!</h2>
-        <div class="connect-content">
-            <div>
-                <h3>Find me on</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/joceline-chen-577066222/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/jocelinechristabelle/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@jocelinechen6804" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.kaggle.com/jocelinechn1" title="Kaggle" target="_blank"><i class="fab fa-kaggle"></i></a>
-                    <a href="https://github.com/jocelinebn1" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="container">
+            <div class="connect-grid">
+                <div class="connect-left">
+                    <h2>Let's Connect!</h2>
+                    <p>I am always open to discussing new projects, creative ideas, or opportunities in business, software engineering, and data science.</p>
+                    
+                    <div class="contact-info-block">
+                        <h3>Find me on</h3>
+                        <div class="social-links" id="social-links-list">
+                            <a href="https://www.linkedin.com/in/joceline-chen-577066222/" title="LinkedIn" target="_blank" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/jocelinechristabelle/" title="Instagram" target="_blank" id="social-instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@jocelinechen6804" title="YouTube" target="_blank" id="social-youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.kaggle.com/jocelinechn1" title="Kaggle" target="_blank" id="social-kaggle"><i class="fab fa-kaggle"></i></a>
+                            <a href="https://github.com/jocelinebn1" title="GitHub" target="_blank" id="social-github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-info">
-                <h3>Contact Info</h3>
-                <p>joceline.chen@binus.ac.id</p>
+
+                <div class="connect-right">
+                    <div class="contact-info-block">
+                        <h3>Email Me</h3>
+                        <a href="mailto:joceline.chen@binus.ac.id" id="contact-email">joceline.chen@binus.ac.id</a>
+                    </div>
+                    <div class="contact-info-block">
+                        <h3>Location</h3>
+                        <p id="contact-location">Bandung, Indonesia</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Easter Egg - Bible Verse -->
-    <button class="easter-egg" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
+    <!-- Easter Egg - Bible Verse Button -->
+    <button class="easter-egg" id="easter-egg-trigger" onclick="showBibleVerse()" title="Daily Bible Verse 📖">📖</button>
 
     <script src="js/script.js"></script>
     <script>
-        function toggleMeaning(button) {
-            const meaningDiv = button.nextElementSibling;
-            meaningDiv.classList.toggle('visible');
+        function toggleTranslation(button) {
+            const content = document.getElementById('translation-details');
+            button.classList.toggle('active');
+            content.classList.toggle('visible');
             
-            // Change button text
-            if (meaningDiv.classList.contains('visible')) {
-                button.textContent = 'Hide Meaning';
+            const isVisible = content.classList.contains('visible');
+            const icon = button.querySelector('i');
+            const label = button.querySelector('span');
+            
+            if (isVisible) {
+                label.textContent = 'Hide Translation & Meaning';
             } else {
-                button.textContent = 'Check Meaning';
+                label.textContent = 'Read Translation & Meaning';
             }
         }
     </script>

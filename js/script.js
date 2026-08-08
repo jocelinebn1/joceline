@@ -1,7 +1,10 @@
+/**
+ * Joceline Christabelle Chen — Portfolio Core Script
+ */
+
 // ============================================
 // BIBLE VERSES DATA
 // ============================================
-
 const bibleVerses = [
     {
         verse: "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
@@ -46,34 +49,54 @@ const bibleVerses = [
 ];
 
 // ============================================
-// BIBLE VERSE FUNCTION
+// BIBLE VERSE FUNCTION (EASTER EGG)
 // ============================================
-
 function showBibleVerse() {
-    // Remove existing card if any
+    // Toggle functionality: Remove existing card if click occurs when visible
     const existingCard = document.querySelector('.bible-verse-card');
     if (existingCard) {
-        existingCard.remove();
+        existingCard.style.animation = 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) reverse forwards';
+        setTimeout(() => {
+            existingCard.remove();
+        }, 300);
         return;
     }
 
+    // Select a random scripture from the data array
     const randomVerse = bibleVerses[Math.floor(Math.random() * bibleVerses.length)];
+    
+    // Create card container
     const card = document.createElement('div');
     card.className = 'bible-verse-card';
+    card.id = 'bible-verse-container';
     card.innerHTML = `
-        <button class="close-verse" onclick="this.parentElement.remove()">✕</button>
-        <h3>Daily Verse</h3>
+        <button class="close-verse" aria-label="Close Daily Verse" onclick="closeBibleVerse(this.parentElement)">✕</button>
+        <h3>Daily Bread</h3>
         <p>"${randomVerse.verse}"</p>
         <div class="verse-reference">— ${randomVerse.reference}</div>
     `;
+    
     document.body.appendChild(card);
 }
 
-// ============================================
-// SMOOTH SCROLL FOR CONTACT LINK
-// ============================================
+/**
+ * Handles closing of the Bible Verse card with a smooth exit transition
+ * @param {HTMLElement} cardElement 
+ */
+function closeBibleVerse(cardElement) {
+    if (!cardElement) return;
+    cardElement.style.animation = 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) reverse forwards';
+    cardElement.style.opacity = '0';
+    setTimeout(() => {
+        cardElement.remove();
+    }, 300);
+}
 
+// ============================================
+// INTERACTIVE FUNCTIONS & SMOOTH SCROLLING
+// ============================================
 document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling behavior for contact anchor links
     const contactLinks = document.querySelectorAll('a[href="#contact"]');
     contactLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -83,5 +106,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
+    });
+
+    // Setup active state highlighting depending on pathname
+    const currentPath = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        } else if (currentPath === '' && linkPath === 'index.html') {
+            // Default highlight home page on root domain
+            link.classList.add('active');
+        }
     });
 });
