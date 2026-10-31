@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works | Joceline Christabelle Chen</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Explore works and academic projects by Joceline Christabelle Chen in Design & Media, Software Development, and Machine Learning.">
+    <!-- Google Fonts & Icon Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="works">
+
+    <!-- Main Content -->
+    <main class="container works-container">
+        <!-- Header -->
+        <div class="works-header">
+            <h1>My Works</h1>
+            <p>A compilation of my academic projects, creative designs, and ongoing technological explorations.</p>
+        </div>
+
+        <!-- Category Grid -->
+        <div class="category-grid" id="works-categories">
+            <div class="category-card" id="card-design">
+                <div class="category-card-top">
+                    <h3>Design & Media</h3>
+                    <p>Creating engaging visual experiences through UI/UX design, corporate branding, digital graphics, and photography that tell compelling stories.</p>
+                </div>
+                <div>
+                    <a href="assets/pdf/PORTOFOLIO%20Multimedia.pdf" download class="seek-btn" id="btn-download-portfolio">
+                        <i class="fas fa-download"></i> Download Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-card" id="card-software">
+                <div class="category-card-top">
+                    <h3>Software Development</h3>
+                    <p>Building functional web applications, managing database structures, and turning software concepts into reality with clean, efficient code.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/jocelinebn1" target="_blank" class="seek-btn" id="btn-view-github-software">
+                        <i class="fab fa-github"></i> View GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="category-card" id="card-ml">
+                <div class="category-card-top">
+                    <h3>Machine Learning</h3>
+                    <p>Exploring data science models, predictive analytics, and machine learning pipelines to solve real-world problems and extract business insights.</p>
+                </div>
+                <div>
+                    <a href="https://www.kaggle.com/jocelinechn1" target="_blank" class="seek-btn" id="btn-view-kaggle-ml">
+                        <i class="fab fa-kaggle"></i> View Kaggle
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blk">
+            <h2 class="section-title">Projects</h2>
+            <div class="tabs"><button class="seek-btn on" data-f="all">All</button><button class="seek-btn" data-f="software">Software</button><button class="seek-btn" data-f="uiux">UI/UX</button><button class="seek-btn" data-f="graphic">Graphic Design</button></div>
+            <div class="pgrid" id="projects"></div>
+        </div>
+
+        <!-- Programming Languages Section -->
+        <div class="languages-section">
+            <h2 class="section-title">Programming Languages</h2>
+
+            <div class="languages-grid" id="langs"></div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
