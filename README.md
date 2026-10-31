@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Joceline Chen — Portfolio
 Vanilla HTML/CSS/JS, no build step. Deploy on GitHub Pages (branch `main`, root).
 - `css/style.css`: your original design system, unchanged, plus an "ENHANCEMENTS" block at the bottom.
